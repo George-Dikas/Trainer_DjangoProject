@@ -1,0 +1,37 @@
+{% extends 'trainer_app/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %} {{title}} {% endblock %}
+
+{% block content %}
+    <h1 class="display-4">{{logo}}</h1>
+    <p class="lead font-italic">Crud Operation Project</p>
+    <hr class="my-4">
+    
+    <form action="" method="post">
+        {% csrf_token %}
+        
+        {{form.lastname|as_crispy_field}}
+        {{form.firstname|as_crispy_field}}
+
+        <div class="row">
+            <div class="col-md-7">
+                {{form.phone|as_crispy_field}}
+            </div>
+            <div class="col-md-5">
+                {{form.subject|as_crispy_field}}
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-5 mt-4">
+                <button type="submit" class="btn btn-primary btn-block btn-lg"><i class="fas fa-save"></i> {{button}}</button>
+            </div>
+            <div class="col-md-7 mt-4">
+                <a href="{% url 'listTrainerView' %}" class="btn btn-secondary btn-block btn-lg">
+                    <i class="fas fa-list"></i> List of Trainers
+                </a>
+            </div>
+        </div>
+    </form>
+{% endblock %}
