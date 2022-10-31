@@ -17,8 +17,8 @@ With Trainer_DjangoProject a user can:
   - Activate Virtual Environment: C:\Users\User\Desktop\cd Trainer_DjangoProject>myenv\Scripts\activate										
 * Clone Project OR:                                                                                                                     
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject>cd myenv									
-  - (myenv) C:\Users\User\Desktop\Trainer_Django_Project\myenv>git clone https://github.com/George-Dikas/Trainer_DjangoProject.git	
-  - Change folder's name Trainer_Django_Project inside the Virtual Environment into trainer_project			
+  - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\myenv>git clone https://github.com/George-Dikas/Trainer_DjangoProject.git	
+  - Change folder's name Trainer_DjangoProject inside the Virtual Environment into trainer_project			
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\myenv>cd trainer_project		
 * Download Project:
   - Code/Download Zip
