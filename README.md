@@ -18,7 +18,8 @@ With Trainer_Django_Project a user can:
 * Clone Project OR:                                                                                                                     
   - (myenv) C:\Users\User\Desktop\Trainer_Django_Project>cd myenv									
   - (myenv) C:\Users\User\Desktop\Trainer_Django_Project\myenv>git clone https://github.com/George-Dikas/Trainer_Django_Project.git	
-  - Change folder's name Trainer_Django_Project inside the Virtual Environment into trainer_project					
+  - Change folder's name Trainer_Django_Project inside the Virtual Environment into trainer_project			
+  - (myenv) C:\Users\User\Desktop\Trainer_Django_Project\myenv>cd trainer_project		
 * Download Project:
   - Code/Download Zip
   - Extract folder and put it into Virtual Environment myenv
