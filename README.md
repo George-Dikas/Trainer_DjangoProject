@@ -13,8 +13,8 @@ With Trainer_DjangoProject a user can:
   - Go to this path: C:\Users\User\Desktop																					
   - Create a folder for the project: C:\Users\User\Desktop>mkdir Trainer_DjangoProject								
   - Get inside the folder: C:\Users\User\Desktop>cd Trainer_DjangoProject																								
-  - Create a Virtual Environment with name myenv: C:\Users\User\Desktop\cd Trainer_DjangoProject>python -m venv myenv					
-  - Activate Virtual Environment: C:\Users\User\Desktop\cd Trainer_DjangoProject>myenv\Scripts\activate										
+  - Create a Virtual Environment with name myenv: C:\Users\User\Desktop\Trainer_DjangoProject>python -m venv myenv					
+  - Activate Virtual Environment: C:\Users\User\Desktop\Trainer_DjangoProject>myenv\Scripts\activate										
 * Clone Project OR:                                                                                                                     
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject>cd myenv									
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\myenv>git clone https://github.com/George-Dikas/Trainer_DjangoProject.git	
