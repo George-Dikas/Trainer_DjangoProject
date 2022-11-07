@@ -8,7 +8,8 @@ With Trainer_DjangoProject a user can:
 * Bootstrap 4.6
 * Django-crispy-forms 1.14.0
 ## Use Project Locally:
-* Open Visual Code Studio:														
+* Virtual Environment:		
+  - Open Visual Code Studio
   - Launch Profile/Command Prompt																										
   - Go to this path: C:\Users\User\Desktop																					
   - Create a folder for the project: C:\Users\User\Desktop>mkdir Trainer_DjangoProject								
