@@ -29,5 +29,5 @@ With Trainer_DjangoProject a user can:
   - Install all requirments for the project: 
     (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\trainer_project>pip install -r requirements.txt
   - Begin your local server: 
-    (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\myenv\trainer_project>python manage.py runserver
+    (myenv) C:\Users\User\Desktop\Trainer_DjangoProject\trainer_project>python manage.py runserver
   - Type into your browser: http://127.0.0.1:8000/registration/
