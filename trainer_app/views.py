@@ -3,47 +3,48 @@ from django.core.paginator import Paginator
 from .forms import TrainerForm
 from .models import Trainer
 
-def regTrainerView(request):
+def trainer_registration(request):
     data = {}
-    data['title'] = 'Trainer Registration'
-    data['logo'] = 'Trainer Registration'
-    data['button'] = 'Submit'
+    data['title_tag'] = data['logo'] = 'Trainer Registration'
+    data['button_tag'] = 'Submit'
 
     if request.method == 'POST':
         form = TrainerForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('listTrainerView')
+            return redirect('trainer-list')
 
     form = TrainerForm()
     data['form'] = form
     return render(request, 'trainer_app/trainer_form.html', data)
 
-def updTrainerView(request, trainer_id, lastname, firstname):
+def trainer_update(request, trainer_id, lastname, firstname):
     trainer = Trainer.objects.get(id=trainer_id)
     data = {}
-    data['title'] = 'Trainer Update'
-    data['logo'] = 'Trainer Update'
-    data['button'] = 'Update'
+    data['title_tag'] = data['logo'] = 'Trainer Update'
+    data['button_tag'] = 'Update'
 
     if request.method == 'POST':
         form = TrainerForm(request.POST, instance=trainer)
         if form.is_valid():
             form.save()
-            return redirect('listTrainerView')
+            return redirect('trainer-list')
 
     form = TrainerForm(instance=trainer)
     data['form'] = form
     return render(request, 'trainer_app/trainer_form.html', data)
 
-def listTrainerView(request): 
-    paginator = Paginator(Trainer.objects.all(), 7)   
+def trainer_list(request): 
+    paginator = Paginator(Trainer.objects.select_related('subject'), 7)   
     page_number = request.GET.get('page')
-    page_obj = paginator.get_page(page_number)  
+    page_obj = paginator.get_page(page_number) 
+    data = {}
+    data['title_tag'] = data['logo'] = 'List of Trainers'
+    data['page_obj'] = page_obj
 
-    return render(request, 'trainer_app/trainer_list.html', {'page_obj':page_obj})
+    return render(request, 'trainer_app/trainer_list.html', data)
 
-def delTrainerView(request, trainer_id):
-    trainer = Trainer.objects.get(id=trainer_id)
-    trainer.delete()
-    return redirect('listTrainerView')
+def trainer_deletion(request, trainer_id):
+    Trainer.objects.get(id=trainer_id).delete()
+    return redirect('trainer-list')
+    

@@ -1,9 +1,7 @@
 {% extends 'trainer_app/base.html' %}
 
-{% block title %} List of Trainers {% endblock %}
-
 {% block content %}
-    <h1 class="display-4">List of Trainers</h1>
+    <h1 class="display-4">{{ logo }}</h1>
     <p class="lead font-italic">Crud Operation Project</p>
     <hr class="my-4">
 
@@ -15,7 +13,7 @@
                 <th>Phone</th>
                 <th>Subject</th>
                 <th>
-                    <a href="{% url 'regTrainerView' %}" class="btn btn-outline-primary"> 
+                    <a href="{% url 'trainer-registration' %}" class="btn btn-outline-primary"> 
                         <i class="fas fa-user-plus"></i>
                     </a>
                 </th>
@@ -24,15 +22,15 @@
         <tbody>
             {% for trainer in page_obj %}
                 <tr>
-                    <td>{{trainer.lastname}}</td>
-                    <td>{{trainer.firstname}}</td>
-                    <td>{{trainer.phone}}</td>
-                    <td>{{trainer.subject}}</td>
+                    <td>{{ trainer.lastname }}</td>
+                    <td>{{ trainer.firstname }}</td>
+                    <td>{{ trainer.phone }}</td>
+                    <td>{{ trainer.subject }}</td>
                     <td>
-                        <a href="{% url 'updTrainerView' trainer.id trainer.lastname trainer.firstname %}" class="text-success"> 
+                        <a href="{% url 'trainer-update' trainer.id trainer.lastname trainer.firstname %}" class="text-success"> 
                             <i class="fas fa-user-edit"></i>
                         </a>                    
-                        <a href="{% url 'delTrainerView' trainer.id %}" 
+                        <a href="{% url 'trainer-deletion' trainer.id %}" 
                         onclick="return confirm('Are you sure you want to delete this trainer?');"> 
                             <i class="fas fa-user-slash text-danger"></i>
                         </a>
@@ -59,19 +57,19 @@
             {% for num in page_obj.paginator.page_range %}
                 {% if num == page_obj.number %}
                     <li class="page-item active" aria-current="page">
-                        <a class="page-link" href="?page={{num}}">{{num}}</a>
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
                     </li>
 
                 {% else %}
                     <li class="page-item">
-                        <a class="page-link" href="?page={{num}}">{{num}}</a>
+                        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
                     </li>
                 {% endif %}
             {% endfor %}
         
             {% if page_obj.has_next %}
                 <li class="page-item">
-                    <a class="page-link" href="?page={{page_obj.next_page_number}}">Next</a>
+                    <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
                 </li>
 
             {% else %}
