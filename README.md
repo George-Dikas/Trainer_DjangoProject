@@ -6,6 +6,7 @@ With Trainer_DjangoProject a user can:
 ## Technologies
 * Django 4.1.2
 * Bootstrap 4.6
+* Font-awesome 5.11.2
 * Django-crispy-forms 1.14.0
 ## Use Project Locally:
 * Project Folder and Virtual Environment:		
