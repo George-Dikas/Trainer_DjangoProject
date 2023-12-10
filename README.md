@@ -5,12 +5,12 @@ With Trainer_DjangoProject a user can:
 * see the list with registered trainers   
 ## Technologies
 * Django 4.1.2
-* Bootstrap 4.6
+* Bootstrap 4.6.2
 * Font-awesome 5.11.2
 * Django-crispy-forms 1.14.0
 ## Use Project Locally:
 * Project Folder and Virtual Environment:		
-  - Open Visual Code Studio
+  - Open Visual Studio Code
   - Launch Profile/Command Prompt																										
   - Go to this path: C:\Users\User\Desktop																					
   - Create a folder for the project: C:\Users\User\Desktop>mkdir Trainer_DjangoProject								
@@ -23,7 +23,7 @@ With Trainer_DjangoProject a user can:
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject>cd trainer_project		
 * Download Project:
   - Code/Download Zip
-  - Extract folder and put it into Virtual Environment myenv
+  - Extract folder and put it into Trainer_DjangoProject folder
   - Change folder's name Trainer_DjangoProject-master into trainer_project
   - (myenv) C:\Users\User\Desktop\Trainer_DjangoProject>cd trainer_project
 * Run Project: 
